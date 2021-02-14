@@ -2,7 +2,7 @@
 
 A Python socket server for use with the [Asterisk](https://github.com/asterisk/asterisk) [AudioSocket](https://github.com/CyCoreSystems/audiosocket) Dialplan application and channel driver.
 
-While it's intended to be used like a Python module/library (see example), you can of course use the information
+While it's intended to be used like a Python module/library (see examples), you can of course use the information
 provided inside of the main file to make something more custom fit for your needs.
 
 The creator of the Asterisk-side programs also made a library himself in Golang, which you
@@ -43,7 +43,7 @@ on the computer using the port 1234, `audiosocket.listen()` will block until a c
 Sending/receiving audio using the provided `read()` and `write()` methods is intended to be done in a `while` loop for as long as `connection.connected` is True. That loop should also send/receive audio to/from another source, for example
 you could use [sounddevice](https://github.com/spatialaudio/python-sounddevice) to play audio from AudioSocket to your speakers and send audio from your microphone to AudioSocket, sorta creating a simple softphone.
 
-In the [example](https://github.com/NormHarrison/audiosocket_server/blob/master/example_application.py) usage here, audio is simply read from the connected Asterisk channel, and then sent back to it, creating an echo/loopback.
+In the [example](https://github.com/NormHarrison/audiosocket_server/blob/master/examples/example_application.py) usage here, audio is simply read from the connected Asterisk channel, and then sent back to it, creating an echo/loopback.
 
 
 ### Handling audio
